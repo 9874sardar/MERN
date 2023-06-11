@@ -19,7 +19,7 @@ router.param("categoryId", getCategoryById);
 //Router idhar hai
 //create
 router.post(
-  "./category/create/:userId",
+  "/category/create/:userId",
   isSignedIn,
   isAuthenticated,
   isAdmin,

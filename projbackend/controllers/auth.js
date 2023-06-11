@@ -87,7 +87,7 @@ exports.isAuthenticated = (req, res, next) => {
   next();
 };
 exports.isAdmin = (req, res, next) => {
-  if (req.profile.role === 0) {
+  if (req.profile.role === 0) { // 1 for admin
     return res.status(403).json({
       error: "You are not a admin, Access denied",
     });
