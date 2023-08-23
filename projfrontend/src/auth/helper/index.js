@@ -41,8 +41,8 @@ export const authenticate = (data , next) => {
 export const signout = user =>{
     if( typeof window !== "undefined"){
         localStorage.removeItem("jwt")
-        next();
-
+        // next();
+        
         return fetch(`${API}/signout`,{
             method: "GET"
         }) 
