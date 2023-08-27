@@ -21,14 +21,14 @@ export const createCategory = (userId, token, category) => {
 };
 
 //get all categories
-export const getAllCategories = () => {
+export const getCategories = () => {
   return fetch(`${API}/categories`, {
-    method: "GET",
+    method: "GET"
   })
-    .then((res) => {
-      return res.json();
+    .then(response => {
+      return response.json();
     })
-    .catch((err) => console.log(err));
+    .catch(err => console.log(err));
 };
 
 //product call

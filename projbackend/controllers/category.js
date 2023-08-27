@@ -29,7 +29,7 @@ exports.getCategory = (req, res) => {
 };
 
 exports.getAllCategory = (req, res) => {
-  Category.find(id).exec((err, categryitems) => {
+  Category.find().exec((err, categryitems) => {
     if (err) {
       return res.status(400).json({
         error: "No category Found",
